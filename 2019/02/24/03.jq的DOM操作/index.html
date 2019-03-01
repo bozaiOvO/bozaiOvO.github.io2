@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>lyyourc</title>
+  <title>03JQ的操作 | lyyourc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/app.css">
@@ -30,11 +30,11 @@
   <main class="post">
   <article>
   <h1 class="article-title">
-    <a href="/2019/02/27/03.jq的DOM操作/"></a>
+    <a href="/2019/02/24/03.jq的DOM操作/">03JQ的操作</a>
   </h1>
 
   <section class="article-meta">
-    <p class="article-date">February 27 2019</p>
+    <p class="article-date">February 24 2019</p>
   </section>
 
   <section class="article-entry">
@@ -50,8 +50,16 @@
 <h2 id="jq创建节点以及节点属性。"><a href="#jq创建节点以及节点属性。" class="headerlink" title="jq创建节点以及节点属性。"></a>jq创建节点以及节点属性。</h2><ul>
 <li>直接使用$来把html结构表示出来<code>$(&#39;&lt;span&gt;我一个快乐的SPAN&lt;/span&gt;&#39;)</code></li>
 <li>他甚至可以把class等属性直接写里面。<code>$(&#39;&lt;span class=&#39;hi&#39;&gt;哈哈&lt;/span&gt;&#39;)</code></li>
-<li>插入就是append。<code>$body.append($(&#39;&lt;span&gt;嘿嘿&lt;/span&gt;&#39;))</code></li>
-<li>在前面插入就是appendTo.</li>
+<li>插入就是append和appendTo。此为append<code>$body.append($(&#39;&lt;span&gt;嘿嘿&lt;/span&gt;&#39;))</code>而appendTo就是反过来，需要插入的内容放在前面，把节点放在后面<code>$(&#39;&lt;span&gt;李双蛋与王花花&lt;/span&gt;&#39;).appendTo($(&#39;.div&#39;))</code>，这两个都是插入在内部。但是都是在内部最后追加！</li>
+<li>如果你想插入到内部并且在最前面的话 就是prepend()与prependTo.方法和append以及appendTo是一样的。</li>
+<li>插入在外部就是after和before，一个是在之后插入，一个是在之前插入。方法和append差不多。</li>
+<li>清空节点empty()，指的是清空所有的内部子节点。<code>$(&#39;div&#39;).empty()</code></li>
+<li>删除节点并且移除自身以及全部的子节点<code>$(&#39;div&#39;).remove()</code></li>
+<li>删除节点的同时也会把这个节点的事件给全部的清空，但是如果你想让该节点消失，但是这个节点的事件不丢失，你可以使用detach()，他会把这个节点的事件保存在内存里。<br><code>`</code>javascript<br>var divEl = $(‘.div’);<br>$(‘.div’).detach()<br>$(‘#btn’).click(function(){<br>  $(‘body’).append(divEl)<br>})</li>
+</ul>
+<p><code>`</code> </p>
+<ul>
+<li>有了添加有了删除，还有一个clone方法。专门用于DOM克隆。<code>$(&#39;.box&#39;).clone()</code>其中可以有一个参数，true和false来控制深克隆和浅克隆。                                                                                        </li>
 </ul>
 
   </section>
@@ -107,7 +115,7 @@
 <script>
   var disqus_shortname = 'drakeleung';
   
-  var disqus_url = 'http://yoursite.com/2019/02/27/03.jq的DOM操作/';
+  var disqus_url = 'http://yoursite.com/2019/02/24/03.jq的DOM操作/';
   
   (function(){
     var dsq = document.createElement('script');
