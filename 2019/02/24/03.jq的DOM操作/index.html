@@ -55,11 +55,13 @@
 <li>插入在外部就是after和before，一个是在之后插入，一个是在之前插入。方法和append差不多。</li>
 <li>清空节点empty()，指的是清空所有的内部子节点。<code>$(&#39;div&#39;).empty()</code></li>
 <li>删除节点并且移除自身以及全部的子节点<code>$(&#39;div&#39;).remove()</code></li>
-<li>删除节点的同时也会把这个节点的事件给全部的清空，但是如果你想让该节点消失，但是这个节点的事件不丢失，你可以使用detach()，他会把这个节点的事件保存在内存里。<br><code>`</code>javascript<br>var divEl = $(‘.div’);<br>$(‘.div’).detach()<br>$(‘#btn’).click(function(){<br>  $(‘body’).append(divEl)<br>})</li>
-</ul>
-<p><code>`</code> </p>
-<ul>
-<li>有了添加有了删除，还有一个clone方法。专门用于DOM克隆。<code>$(&#39;.box&#39;).clone()</code>其中可以有一个参数，true和false来控制深克隆和浅克隆。                                                                                        </li>
+<li><p>删除节点的同时也会把这个节点的事件给全部的清空，但是如果你想让该节点消失，但是这个节点的事件不丢失，你可以使用detach()，他会把这个节点的事件保存在内存里。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> divEl = $(<span class="string">'.div'</span>);</span><br><span class="line">$(<span class="string">'.div'</span>).detach()</span><br><span class="line">$(<span class="string">'#btn'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'body'</span>).append(divEl)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">+ 有了添加有了删除，还有一个clone方法。专门用于DOM克隆。`</span>$(<span class="string">'.box'</span>).clone()<span class="string">`其中可以有一个参数，true和false来控制深克隆和浅克隆。深克隆的话他会把你的事件也克隆， 浅克隆只是复制了结构。</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line">$(<span class="string">'.box'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).append($(<span class="keyword">this</span>).clone(<span class="literal">true</span>).css(<span class="string">'color'</span>,<span class="string">'pink'</span>))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>克隆/添加/删除都有了，那就该替换了replaceWith。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.box'</span>).replaceWith(<span class="string">'&lt;span&gt;你看似同龄遥遥领先，可是你终究还是loser，你距离成功太远了。&lt;/span&gt;'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
 </ul>
 
   </section>

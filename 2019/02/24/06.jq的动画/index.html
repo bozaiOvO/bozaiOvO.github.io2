@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>06JQ的动画 | lyyourc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+  
+</head>
+</html>
+<body>
+  <nav class="app-nav">
+  
+    
+      <a href="/.">home</a>
+    
+  
+    
+      <a href="/archives">archive</a>
+    
+  
+    
+      <a href="/atom.xml">rss</a>
+    
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/2019/02/24/06.jq的动画/">06JQ的动画</a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">February 24 2019</p>
+  </section>
+
+  <section class="article-entry">
+    <ul>
+<li><p>隐藏and显示and切换</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'button:first'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'.d1'</span>).hide()<span class="comment">//隐藏</span></span><br><span class="line">&#125;)</span><br><span class="line">$(<span class="string">'button:eq(1)'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'.d1'</span>).show()<span class="comment">//显示</span></span><br><span class="line">&#125;)</span><br><span class="line">$(<span class="string">'button:last'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'.d1'</span>).toggle()<span class="comment">//这个切换通过的是display 从右边到左边</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上卷下拉.<br><code>`</code>javascript<br>$(‘button:first’).click(function(){<br>  $(‘.d1’).slideDown()//下拉<br>})<br>$(‘button:eq(1)’).click(function(){<br>  $(‘.d1’).slideUp()//上卷<br>})<br>$(‘button:last’).click(function(){<br>  $(‘.d1’).slideToggle()//这个切换动态效果从下至上。竖向动作，slideToggle 通过高度变化来切换所有匹配元素的可见性<br>})</p>
+</li>
+</ul>
+<pre><code>+ 淡入淡出
+```javascript
+$(&apos;button:first&apos;).click(function(){
+    $(&apos;.d1&apos;).fadeOut()//淡出
+})
+$(&apos;button:eq(1)&apos;).click(function(){
+    $(&apos;.d1&apos;).fadeIn()//淡入
+})
+$(&apos;button:eq(2)&apos;).click(function(){
+    $(&apos;.d1&apos;).fadeToggle()//切换
+})
+//但是！！！！如果用这个都是0到1，可不可以自定义到.8或者.5呢？
+$(&apos;button:last&apos;).click(function(){
+    $(&apos;.d1&apos;).fadeTo( duration, opacity ,callback);
+    //必需的 duration参数规定效果的时长。它可以取以下值：&quot;slow&quot;、&quot;fast&quot; 或毫秒。必需的 opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。可选的 callback 回调函数。
+})
+</code></pre>
+  </section>
+</article>
+
+  <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="http://7xrcp8.com1.z0.glb.clouddn.com/avatar.png" alt="avatar">
+    <div class="grid-item">
+      <p class="title"> lyyourc </p>
+      <p class="subtitle"> You Are The JavaScript In My HTML </p>
+    <div>
+  </div></div></section>
+
+  <section class="share-btns">
+    <!-- <p> share it if you like it~ </p> -->
+    <a class="twitter-share-button" data-size="large" data-via="DrakeLeung" href="https://twitter.com/intent/tweet?text=>
+<li><p>隐藏and显示and切">
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+  </section>
+</div>
+
+
+  
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'drakeleung';
+  
+  var disqus_url = 'http://yoursite.com/2019/02/24/06.jq的动画/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  
+</main>
+
+</body>
+</html>
