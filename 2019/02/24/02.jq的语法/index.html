@@ -85,6 +85,8 @@
 <li>取反<code>$(&#39;div:not(:odd)&#39;)</code></li>
 </ul>
 <h4 id="jq属性与样式"><a href="#jq属性与样式" class="headerlink" title="jq属性与样式"></a>jq属性与样式</h4><ul>
+<li>获取css<code>$(&#39;.d1&#39;).css(&#39;background-color&#39;);$(&#39;.d1&#39;).css([&#39;color&#39;,&#39;size&#39;])</code></li>
+<li>设置CSS<code>$(&#39;div&#39;).css(&#39;color&#39;,&#39;red&#39;)</code></li>
 <li>获取属性的值<code>$(input).attr(&#39;value&#39;)</code></li>
 <li>设置属性的值<code>$(input).attr(&#39;value&#39;,&#39;xxx&#39;)</code></li>
 <li><p>你甚至都能在后面写一个函数</p>
@@ -96,8 +98,14 @@
 <li><p>有删除就有移除，移除某一个属性removeAttr()</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'input'</span>).removeAttr(<span class="string">'value'</span>)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>获取html结构<code>$(&#39;div&#39;).html()</code></p>
+<li><p>常见的jq事件。</p>
 </li>
+<li>做一个折叠窗的demo。</li>
+<li><p>做一个淘宝的demo。</p>
+</li>
+<li><p>————————-分割线————————</p>
+</li>
+<li>获取html结构<code>$(&#39;div&#39;).html()</code></li>
 <li>获取文本<code>$(div).text()</code></li>
 <li>插入html,<code>$(&#39;div&#39;).html(&#39;&lt;p&gt;hi&lt;/p&gt;&#39;)</code></li>
 <li>插入文本<code>$(&#39;div&#39;).text(&#39;张全蛋&#39;)</code></li>
@@ -105,9 +113,10 @@
 <li>添加类名<code>$(div).addClass(&#39;new&#39;)</code></li>
 <li>删除类名<code>$(div).removeClass(&#39;new&#39;)</code></li>
 <li>类名切换，有就删除，没有就添加。<code>$(&#39;div&#39;).toggleClass(&#39;new&#39;)</code></li>
-<li>获取css<code>$(&#39;.d1&#39;).css(&#39;background-color&#39;);$(&#39;.d1&#39;).css([&#39;color&#39;,&#39;size&#39;])</code></li>
-<li>设置CSS<code>$(&#39;div&#39;).css(&#39;color&#39;,&#39;red&#39;)</code></li>
-<li>在平常给一个元素添加样式到底用.css还是.addClass呢？他们有什么优先级呢？经常需要动态改变，比如说需要后台传来的值来设置css，那么就是.css更好，静态的结构，那就是addClass更优。</li>
+<li><p>检测类名<code>$(&#39;.box&#39;).hasClass(&#39;box&#39;)</code></p>
+</li>
+<li><p>在平常给一个元素添加样式到底用.css还是.addClass呢？他们有什么优先级呢？经常需要动态改变，比如说需要后台传来的值来设置css，那么就是.css更好，静态的结构，那就是addClass更优。</p>
+</li>
 </ul>
 
   </section>

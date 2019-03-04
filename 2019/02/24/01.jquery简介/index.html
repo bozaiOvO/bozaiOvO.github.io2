@@ -65,10 +65,17 @@
 </ul>
 <h2 id="百足之虫，死而不僵！"><a href="#百足之虫，死而不僵！" class="headerlink" title="百足之虫，死而不僵！"></a>百足之虫，死而不僵！</h2><ul>
 <li>纵然很多人叫嚣什么“JQ已死”，实际上jq仍然有一席之地！尤其是需要SEO优化的网站是不适合MVVM的！</li>
-<li>学习成本低，几乎没有学习成本，看看就会了！不用担心浪费时间。</li>
+<li>学习成本低，几乎没有学习成本，看看就会了！不用担心浪费时间，事实上有开发经验的人使用这个东西都是开箱即用，也不用刻意记一些api。</li>
 <li>内部系统和私人网站更适合VUE/angular/react。而to C产品，也就是面对消费者的产品，更多是用JQ。</li>
 <li>更多要看场景，而不是谁厉害就用谁！最厉害的未必是最好的，适合你的才是最棒的。</li>
-<li>jq其实真正意义上并没有死，只是他的历史使命已经优秀的完成，他的优秀地方也被js标准所吸收。</li>
+<li>jq其实真正意义上并没有死，只是他的历史使命已经优秀的完成，他的优秀地方也被js标准所吸收。比如querySelector和classList等…..</li>
+</ul>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="*扩展"></a>*扩展</h2><h3 id="啥是MVVM？"><a href="#啥是MVVM？" class="headerlink" title="啥是MVVM？"></a>啥是MVVM？</h3><ul>
+<li>MVVM分为Model、View、ViewModel三者。</li>
+<li>Model 代表数据模型，数据和业务逻辑都在Model层中定义；</li>
+<li>View 代表UI视图，负责数据的展示；</li>
+<li>ViewModel 负责监听 Model 中数据的改变并且控制视图的更新，处理用户交互操作；</li>
+<li>Model 和 View 并无直接关联，而是通过 ViewModel 来进行联系的，Model 和 ViewModel 之间有着双向数据绑定的联系。因此当 Model 中的数据改变时会触发 View 层的刷新，View 中由于用户交互操作而改变的数据也会在 Model 中同步。这种模式实现了 Model 和 View 的数据自动同步，因此开发者只需要专注对数据的维护操作即可，而不需要自己操作 dom。</li>
 </ul>
 
   </section>
