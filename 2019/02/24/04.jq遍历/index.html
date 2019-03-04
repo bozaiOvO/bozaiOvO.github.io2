@@ -39,10 +39,11 @@
 
   <section class="article-entry">
     <ul>
-<li>jq是一个合集对象，如果你想快速寻找合集的第一季子元素，可以用children()方法。<code>$(&#39;.box&#39;).children()</code>,如果想要所有的子类，那就是<code>$(&#39;.box&#39;).find(&#39;*&#39;)</code>，当然如果说你要某一个<code>$(&#39;.box&#39;).find(&#39;a&#39;)</code>意为从box里拿到所有的a标签。 </li>
-<li>能找孩子，就能找他爹。寻找父类元素就是<code>$(&#39;.box&#39;).parent()</code>,这个寻找的是直接父类。想要寻找全部的父类就是<code>$(&#39;.box&#39;).parents()</code>,全部的这个就没有什么参数了。</li>
-<li>下一个兄弟节点<code>$(&#39;.box&#39;).next()</code> ，上一个兄弟节点<code>$(&#39;.box&#39;).prev()</code></li>
-<li>each方法，相当于循环函数，里面有两个参数。index和ele<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index,ele</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index&gt;<span class="number">2</span>)&#123;</span><br><span class="line">        $(<span class="keyword">this</span>).css(<span class="string">'color'</span>,<span class="string">'red'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>jq是一个合集对象，如果你想快速寻找合集的第一季子元素，可以用children()方法。<code>$('.box').children()</code>,如果想要所有的子类，那就是<code>$('.box').find('*')</code>，当然如果说你要某一个<code>$('.box').find('a')</code>意为从box里拿到所有的a标签。</li>
+<li>能找孩子，就能找他爹。寻找父类元素就是<code>$('.box').parent()</code>,这个寻找的是直接父类。想要寻找全部的父类就是<code>$('.box').parents()</code>,全部的这个就没有什么参数了。</li>
+<li>下一个兄弟节点<code>$('.box').next()</code> ，上一个兄弟节点<code>$('.box').prev()</code>,全部的兄弟节点<code>$('.box').siblings()</code></li>
+<li>each方法，相当于循环函数，里面有两个参数。index和ele
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index,ele</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index&gt;<span class="number">2</span>)&#123;</span><br><span class="line">        $(<span class="keyword">this</span>).css(<span class="string">'color'</span>,<span class="string">'red'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
 </ul>
 
   </section>
