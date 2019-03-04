@@ -39,21 +39,28 @@
 
   <section class="article-entry">
     <ul>
-<li>点击事件。<code>$(ele).click(function(){....})</code></li>
-<li><p>甚至这个东西可以传递参数.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//不同函数传递数据</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">data</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    alert(e.data) <span class="comment">//1111</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"button"</span>).click(<span class="number">1111</span>, data)</span><br><span class="line">&#125;</span><br><span class="line">a();</span><br></pre></td></tr></table></figure>
+<li>
+<p>点击事件。<code>$(ele).click(function(){....})</code></p>
 </li>
-<li><p>甚至还能双击</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li'</span>).dblclick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           alert(<span class="string">'ff'</span>)</span><br><span class="line">       &#125;)</span><br></pre></td></tr></table></figure>
+<li>
+<p>甚至这个东西可以传递参数.
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//不同函数传递数据</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">data</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    alert(e.data) <span class="comment">//1111</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">"button"</span>).click(<span class="number">1111</span>, data)</span><br><span class="line">&#125;</span><br><span class="line">a();</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>mouseenter事件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li'</span>).mouseenter事件(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           alert(<span class="string">'ff'</span>)</span><br><span class="line">       &#125;)</span><br></pre></td></tr></table></figure>
+<li>
+<p>甚至还能双击
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li'</span>).dblclick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           alert(<span class="string">'ff'</span>)</span><br><span class="line">       &#125;)</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>on多事件绑定。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'ele'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//多个事件绑定在同一个 函数</span></span><br><span class="line"> $(<span class="string">"#elem"</span>).on(<span class="string">"mouseover mouseout"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; &#125;);</span><br><span class="line"><span class="comment">//多个事件 绑定不同的函数</span></span><br><span class="line">$(<span class="string">"#elem"</span>).on(&#123;</span><br><span class="line">    mouseover:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,  </span><br><span class="line">    mouseout:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<li>
+<p>mouseenter事件
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li'</span>).mouseenter事件(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           alert(<span class="string">'ff'</span>)</span><br><span class="line">       &#125;)</span><br></pre></td></tr></table></figure></p>
 </li>
-<li><p>移除事件。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//全部移除</span></span><br><span class="line">$(<span class="string">'ele'</span>).off()</span><br><span class="line"><span class="comment">//指定移除</span></span><br><span class="line">$(<span class="string">'ele'</span>).off(<span class="string">'click'</span>)</span><br></pre></td></tr></table></figure>
+<li>
+<p>on多事件绑定。
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'ele'</span>).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//多个事件绑定在同一个 函数</span></span><br><span class="line"> $(<span class="string">"#elem"</span>).on(<span class="string">"mouseover mouseout"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; &#125;);</span><br><span class="line"><span class="comment">//多个事件 绑定不同的函数</span></span><br><span class="line">$(<span class="string">"#elem"</span>).on(&#123;</span><br><span class="line">    mouseover:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,  </span><br><span class="line">    mouseout:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+</li>
+<li>
+<p>移除事件。
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//全部移除</span></span><br><span class="line">$(<span class="string">'ele'</span>).off()</span><br><span class="line"><span class="comment">//指定移除</span></span><br><span class="line">$(<span class="string">'ele'</span>).off(<span class="string">'click'</span>)</span><br></pre></td></tr></table></figure></p>
 </li>
 </ul>
 
@@ -72,7 +79,8 @@
   <section class="share-btns">
     <!-- <p> share it if you like it~ </p> -->
     <a class="twitter-share-button" data-size="large" data-via="DrakeLeung" href="https://twitter.com/intent/tweet?text=>
-<li>点击事件。<code>$(e">
+<li>
+<p>点击事件。<code">
   Tweet
 </a>
 
