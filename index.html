@@ -1,198 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <title>lyyourc</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/app.css">
-  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
-  
-</head>
-</html>
-<body>
-  <nav class="app-nav">
-  
-    
-      <a class="active" href="/.">home</a>
-    
-  
-    
-      <a href="/archives">archive</a>
-    
-  
-    
-      <a href="/atom.xml">rss</a>
-    
-  
-</nav>
+extends includes/layout
 
-  <header class="app-header">
-  <section class="banner">
-    <!-- http://daverupert.com/2015/12/intrinsic-placeholders-with-picture/ -->
-    <div class="placeholder"></div>
-    <img class="banner-small" data-src="http://7xrcp8.com1.z0.glb.clouddn.com/banner-large.png" src="http://7xrcp8.com1.z0.glb.clouddn.com/banner-small.png" alt="banner">
-  </section>
+block content
 
-  <section class="description">
-    <img class="avatar" src="http://7xrcp8.com1.z0.glb.clouddn.com/avatar.png" alt="avatar">
-    <h1 class="title"> lyyourc </h1>
-    <h3 class="subtitle"> You Are The JavaScript In My HTML </h3>
-  </section>
+    section#wrapper.home
+        ul#post-list
+            each item in page.posts.sort('date', -1).toArray()
+                - var postTitle = item.title || 'No Title'
+                - var createDate = date(item.date, 'MMM DD')
+                li
+                    aside.dates=createDate
+                    if item.link
+                        a(href=url_for(item.link))= postTitle
+                            h2!=item.excerpt
+                    else
+                        a(href=url_for(item.path))= postTitle
+                            h2!=item.excerpt
 
-  <ul class="social-list">
-    <a href="https://twitter.com/DrakeLeung">Twitter</a>
-    <a href="https://github.com/DrakeLeung">GitHub</a>
-    <a href="http://weibo.com/cha12chalyc">Weibo</a>
-  </ul>
-</header>
+        nav#post-nav
+            span.prev(style='padding-left: 20px;')
+                if page.prev
+                    a(href=url_for(page.prev_link))
+                        span.arrow ←
+                        | Newer Posts
+            span.next
+                if page.next
+                    a(href=url_for(page.next_link))
+                        | Older Posts
+                        span.arrow →
 
-<main class="index">
-  
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/02/24/01.jquery简介/">01JQ的今生与未来。</a>
-      </h1>
 
-      <div class="article-entry">
-        
-      </div>
 
-      <div class="article-meta">
-        <span class="article-date">Feb 24 2019</span>
-      </div>
-    </article>
-  
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/02/24/03.jq的DOM操作/">03JQ的DOM操作</a>
-      </h1>
-
-      <div class="article-entry">
-        
-      </div>
-
-      <div class="article-meta">
-        <span class="article-date">Feb 24 2019</span>
-      </div>
-    </article>
-  
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/02/24/04.jq遍历/">04Jq遍历</a>
-      </h1>
-
-      <div class="article-entry">
-        
-      </div>
-
-      <div class="article-meta">
-        <span class="article-date">Feb 24 2019</span>
-      </div>
-    </article>
-  
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/02/24/02.jq的语法/">02JQ的语法</a>
-      </h1>
-
-      <div class="article-entry">
-        
-      </div>
-
-      <div class="article-meta">
-        <span class="article-date">Feb 24 2019</span>
-      </div>
-    </article>
-  
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/02/24/05.jq的事件/">05Jq事件</a>
-      </h1>
-
-      <div class="article-entry">
-        
-      </div>
-
-      <div class="article-meta">
-        <span class="article-date">Feb 24 2019</span>
-      </div>
-    </article>
-  
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/02/24/常见问题以及注意事项/">常见问题以及注意事项</a>
-      </h1>
-
-      <div class="article-entry">
-        
-      </div>
-
-      <div class="article-meta">
-        <span class="article-date">Feb 24 2019</span>
-      </div>
-    </article>
-  
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/02/24/06.jq的动画/">06JQ的动画</a>
-      </h1>
-
-      <div class="article-entry">
-        
-      </div>
-
-      <div class="article-meta">
-        <span class="article-date">Feb 24 2019</span>
-      </div>
-    </article>
-  
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/02/17/my-new-post/">html</a>
-      </h1>
-
-      <div class="article-entry">
-        
-      </div>
-
-      <div class="article-meta">
-        <span class="article-date">Feb 17 2019</span>
-      </div>
-    </article>
-  
-    <article>
-      <h1 class="article-title">
-        <a href="/2019/02/17/hello-world/">Hello World</a>
-      </h1>
-
-      <div class="article-entry">
-        
-      </div>
-
-      <div class="article-meta">
-        <span class="article-date">Feb 17 2019</span>
-      </div>
-    </article>
-  
-
-  <nav class="page-nav">
-  <span class="page-number current">1</span>
-</nav>
-
-</main>
-
-<footer class="app-footer">
-  <p>
-    Written by
-    <a href="https://github.com/DrakeLeung/hexo-theme-again">
-      Drake Leung
-    </a>
-  </p>
-  <p> Powered by <a href="https://hexo.io"> Hexo </a> </p><p>
-</p></footer>
-
-<script src="/js/app.js"></script>
-
-</body>
-</html>

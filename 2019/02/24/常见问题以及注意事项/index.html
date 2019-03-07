@@ -1,160 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <title>常见问题以及注意事项 | lyyourc</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/app.css">
-  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
-  
-</head>
-</html>
-<body>
-  <nav class="app-nav">
-  
-    
-      <a href="/.">home</a>
-    
-  
-    
-      <a href="/archives">archive</a>
-    
-  
-    
-      <a href="/atom.xml">rss</a>
-    
-  
-</nav>
+extends includes/layout
 
-  <main class="post">
-  <article>
-  <h1 class="article-title">
-    <a href="/2019/02/24/常见问题以及注意事项/">常见问题以及注意事项</a>
-  </h1>
+block content
 
-  <section class="article-meta">
-    <p class="article-date">February 24 2019</p>
-  </section>
+    section#wrapper.post
+        article
+            header
+                h1!=page.title
+                h2.headline!=date(page.date, 'MMM DD, YYYY h:mm')
+                    |·
+                    |#{wordcount(page.content)} words
+                    |·
+                    |#{min2read(page.content)} minutes read
+                    span.tags
 
-  <section class="article-entry">
-    <h1>强调一下：</h1>
-<ul>
-<li><strong>你在来之前，必须让父母知道你去来干什么，解释不清楚就多和父母解释几遍，务必要让父母知道你的动向！如果父母不放心的，可以让父母一起来一次，不要觉得不好意思啥的，我以前大学刚刚毕业那会，去远方的时候，父母也是很担忧，如果父母不放心，就带他们来一次，现在交通很便利的！！！不要瞒着父母行动！！！！</strong></li>
-</ul>
-<h1>常见问题。</h1>
-<h2>我去哪儿报道？</h2>
-<ul>
-<li>无论前端亦或者UI <strong>统一</strong> 去绿地新都会6号楼1210.（郑州地铁一号线到东风南路，C口出，然后抬头往上看附近高楼会有绿地新都会的大字，或者高德地图。）</li>
-<li>6号楼1210是UI教室和你们报道的地方，前端班不在6号楼上课，也是在绿地C座。</li>
-<li>6号楼有低层区和高层区，1210属于高层区，就在低层区拐角处，如果还是不懂，问前台小姐姐。</li>
-</ul>
-<h2>有宿舍吗？</h2>
-<ul>
-<li>有，因为大部分都是外地的同学，所以我们有宿舍，一个月450左右，水电费公摊，有热水，有卫生间，有洗衣机，都是整租的，男生是复式楼三个卫生间或者是四室一厅两个卫生间，女生清一色两室一厅。有厨房，但是不允许做饭。没有wifi。</li>
-<li>也可以出去租房子，这边是郑州东区，房子一般是七八百一个单间，几十人共用卫生间，独卫一般是1200以上。（出去住宿的必须知道住的地址。）</li>
-</ul>
-<h2>我需要带什么？</h2>
-<ul>
-<li>床垫不需要，其他的贴身东西，被子/枕头/床单都要自备，洗漱用品以及喝水的杯子！</li>
-<li>带的东西太多？没关系！这边有超市，被子差不多85，床单+被罩+枕头套差不多120。</li>
-<li>前端学员 <strong>自带笔记本</strong> ！自带笔记本！自带笔记本！说三遍！如果没有可以选择购买1500的ThinkPad二手，和新的一样，标压U，撸代码战斗流畅战斗三年没压力，作为一个程序员，电脑就是你的饭碗，就是你的钢枪，别到时候没电脑，贼尴尬呀兄弟。。（如果电脑方面实在有问题，请尽管与老师联系！）</li>
-<li>UI学员无须自带笔记本，想带也行，UI配置是全Mac电脑（第一星期应该是windows，只有第一星期是，因为老学员一个星期后走）</li>
-<li>带脑子好好学，别对不起这交的钱，来了就别整天想吃鸡和撩小姐姐，除非你学的好！</li>
-</ul>
-<h2>有食堂吗？</h2>
-<ul>
-<li>没有！没有！没有！重要的事儿说三遍，我们是坐落在绿地高档写字楼里，和你以后上班的地方一样，都是写字楼，楼下有餐厅，也可以点外卖。（我们的写字楼是我认知的培训班里最好的，也是因为我们的房租是别人的几倍...）</li>
-</ul>
-<h2>生活费一般一个月多少</h2>
-<ul>
-<li>一般1300就能过...1500就很滋润了。毕竟除了牙刷牙膏日用品，平常都是正常吃饭了。你也没时间玩。</li>
-<li>上述生活费并不包括住宿费！</li>
-</ul>
-<h2>试听？</h2>
-<ul>
-<li>可以！可以！可以！你们来的第一周都是试听，一般第三天开始收学费，如果听完一星期觉得不满意，就可以离开，按天数扣掉那几天的住宿费。</li>
-</ul>
-<h2>学习时间？</h2>
-<ul>
-<li>想啥呢大兄弟，这边除了你睡觉和吃饭，剩下的都是撸代码/做设计或者在路上。</li>
-<li>我们老师下班时间是晚上六点，但是基本上都会陪你们到晚上九点十点！星期六也有老师，但是星期天，总要让老师喘口气...</li>
-<li>然后这边基本上都是早上八九点来了，晚上九点十点回宿舍/家。都比较辛苦。星期天也可以来，但是建议星期天洗洗衣服，喘口气。</li>
-</ul>
-<h1>再次强调一下：</h1>
-<ul>
-<li><strong>你在来之前，必须让父母知道你去来干什么，解释不清楚就多和父母解释几遍，务必要让父母知道你的动向！如果父母不放心的，可以让父母一起来一次，不要觉得不好意思啥的，我以前大学刚刚毕业那会，去远方的时候，父母也是很担忧，如果父母不放心，就带他们来一次，现在交通很便利的！！！不要瞒着父母行动！！！！</strong></li>
-</ul>
+            if toc(page.content)
+                div#toc!=toc(page.content,{list_number:false})
 
-  </section>
-</article>
+            section#post-body!=page.content
 
-  <div class="sharing grid">
-  <section class="profile grid-item grid">
-    <img class="avatar" src="http://7xrcp8.com1.z0.glb.clouddn.com/avatar.png" alt="avatar">
-    <div class="grid-item">
-      <p class="title"> lyyourc </p>
-      <p class="subtitle"> You Are The JavaScript In My HTML </p>
-    <div>
-  </div></div></section>
+            - var prev = page.prev ? page.prev.path : false;
+            - var next = page.next ? page.next.path : false;
+            nav#post-nav
+                span.prev
+                    if page.prev
+                        a(href=url_for(prev))
+                            span.arrow ←
+                            | Newer Posts
+                span.next
+                    if page.next
+                        a(href=url_for(next))
+                            | Older Posts
+                            span.arrow →
 
-  <section class="share-btns">
-    <!-- <p> share it if you like it~ </p> -->
-    <a class="twitter-share-button" data-size="large" data-via="DrakeLeung" href="https://twitter.com/intent/tweet?text=>强调一下：</h1>
-<ul>
-<li">
-  Tweet
-</a>
-
-<script>
-  window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  js.async = true;
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));
-</script>
-
-  </section>
-</div>
+            include includes/comment.pug
 
 
-  
-    
-<section class="article-comment">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-
-<script>
-  var disqus_shortname = 'drakeleung';
-  
-  var disqus_url = 'http://yoursite.com/2019/02/24/常见问题以及注意事项/';
-  
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
 
 
-  
-</main>
-
-</body>
-</html>

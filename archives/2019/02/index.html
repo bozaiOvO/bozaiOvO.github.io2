@@ -1,139 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <title>lyyourc</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/app.css">
-  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
-  
-</head>
-</html>
-<body>
-  <nav class="app-nav">
-  
-    
-      <a href="/.">home</a>
-    
-  
-    
-      <a href="/archives">archive</a>
-    
-  
-    
-      <a href="/atom.xml">rss</a>
-    
-  
-</nav>
+extends includes/layout
 
-  <main class="archive">
-  
-    <article class="grid">
-  <h1 class="article-title grid-item">
-    <a href="/2019/02/24/01.jquery简介/">01JQ的今生与未来。</a>
-  </h1>
+block content
 
-  <div class="article-meta">
-    <span class="article-date">Feb 24 2019</span>
-  </div>
-</article>
+    section#wrapper.home
 
-  
-    <article class="grid">
-  <h1 class="article-title grid-item">
-    <a href="/2019/02/24/03.jq的DOM操作/">03JQ的DOM操作</a>
-  </h1>
+        div.archive
+            h3!='~yeah~baby~'
+            each item in site.posts.sort('date', -1).toArray()
+              - var postTitle = item.title || 'No Title'
+              - var createDate = date(item.date, 'MMM DD')
+              ul
+                  div.post-item
+                      div.post-time=createDate
+                      if item.link
+                          a.post-link(href=url_for(item.link))= postTitle
+                      else
+                          a.post-link(href=url_for(item.path))= postTitle
 
-  <div class="article-meta">
-    <span class="article-date">Feb 24 2019</span>
-  </div>
-</article>
 
-  
-    <article class="grid">
-  <h1 class="article-title grid-item">
-    <a href="/2019/02/24/04.jq遍历/">04Jq遍历</a>
-  </h1>
 
-  <div class="article-meta">
-    <span class="article-date">Feb 24 2019</span>
-  </div>
-</article>
-
-  
-    <article class="grid">
-  <h1 class="article-title grid-item">
-    <a href="/2019/02/24/02.jq的语法/">02JQ的语法</a>
-  </h1>
-
-  <div class="article-meta">
-    <span class="article-date">Feb 24 2019</span>
-  </div>
-</article>
-
-  
-    <article class="grid">
-  <h1 class="article-title grid-item">
-    <a href="/2019/02/24/05.jq的事件/">05Jq事件</a>
-  </h1>
-
-  <div class="article-meta">
-    <span class="article-date">Feb 24 2019</span>
-  </div>
-</article>
-
-  
-    <article class="grid">
-  <h1 class="article-title grid-item">
-    <a href="/2019/02/24/常见问题以及注意事项/">常见问题以及注意事项</a>
-  </h1>
-
-  <div class="article-meta">
-    <span class="article-date">Feb 24 2019</span>
-  </div>
-</article>
-
-  
-    <article class="grid">
-  <h1 class="article-title grid-item">
-    <a href="/2019/02/24/06.jq的动画/">06JQ的动画</a>
-  </h1>
-
-  <div class="article-meta">
-    <span class="article-date">Feb 24 2019</span>
-  </div>
-</article>
-
-  
-    <article class="grid">
-  <h1 class="article-title grid-item">
-    <a href="/2019/02/17/my-new-post/">html</a>
-  </h1>
-
-  <div class="article-meta">
-    <span class="article-date">Feb 17 2019</span>
-  </div>
-</article>
-
-  
-    <article class="grid">
-  <h1 class="article-title grid-item">
-    <a href="/2019/02/17/hello-world/">Hello World</a>
-  </h1>
-
-  <div class="article-meta">
-    <span class="article-date">Feb 17 2019</span>
-  </div>
-</article>
-
-  
-
-  <nav class="page-nav">
-  <span class="page-number current">1</span>
-</nav>
-
-</main>
-
-</body>
-</html>
